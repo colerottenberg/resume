@@ -1,0 +1,218 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT --------------------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  \vspace{-4pt}
+  \color{gray}
+  \item
+  Last Updated on September 18th, 2023
+\end{flushright}
+
+\vspace{-7pt}
+
+\begin{center}
+    \textbf{\Huge \scshape Cole Rottenberg } \\ \vspace{8pt}
+    \small 
+    \faIcon{github}
+    \href{https://github.com/johnDoe}{\underline{github.com/colerottenberg}} $  $
+    % \faIcon{code}
+    % \href{https://www.johndoe.com}
+    % {\underline{johndoe.com}} $  $
+    \faIcon{linkedin}
+    \href{https://linkedin.com/in/colerottenberg}{\underline{linkedin.com/in/colerottenberg}} $  $
+    \faIcon{envelope}
+    \href{mailto:cole.rottenberg@gmail.com}
+    {\underline{cole.rottenberg@gmail.com}}
+\end{center}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {University of Florida}{May 2025}
+      {Bachelor of Science in Computer Engineering}{Current GPA: 3.52/4.0}
+      
+    \resumeSubheading
+      {Lake Highland Preparatory School }{June 2020}
+      {}{GPA: 4.3/4.0}
+
+    \vspace{-10pt}
+    \subsection{Relevant Coursework}
+      \textbf{Courses:} Data Structures and Algorithms, Digital Logic, Microprocessor Applications, Signals and Systems, Circuits 1, Computational Linear Algebra, Data Science for ECE\\
+      % \textbf{Awards:} Dean's Honor List (at Cool University, for the fall, winter, and spring quarters each), 2x AP Scholar with Distinction Awards, World Language History Award (for Spanish)
+
+  \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     \textbf{Languages}{: C/C++, Java, Python, MATLAB, Rust, \LaTeX} \\
+     
+     \textbf{Skills}{: Git/GitHub, Linux, Vim}
+     
+     % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib, FreeRTOS, ESP-IDF}
+     
+    }}
+ \end{itemize}
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+        \resumeProjectHeading
+        {\textbf{Real-time IMU Data Streaming via DMA \& UART} $|$ \footnotesize\emph{C, C++, ASM}}{May 2023}
+        \resumeItemListStart
+            \resumeItem{Enable low latency access to IMU data through DMA coprocessor freeing CPU}
+            \resumeItem{Ran CPU in sync with software enabled DMA transfers}
+            % \resumeItem{Used minimal API calls, the bulk of the code was self-made logic and design}
+            % \resumeItem{Chose to restart the entire project to optimize runtime and experience}
+            \resumeItem{Redesigned data transfers architecture allowing an order of magnitude increase in speed}
+            \resumeItem{Pipelined IMU data over high-speed UART stream via hardware interrupts}
+            % \resumeItem{Optimized UX (User Experience) e.g. bought a simple domain name, made documentation, recorded a setup \& demo video, customization through URL arguments}
+            % \resumeItem{Published to GitHub and obsproject.com}
+        \resumeItemListEnd
+          
+        \resumeProjectHeading
+        {\textbf{ClubHub} $|$ \footnotesize\emph{Go, TypeScript, Angular, RESTful API, Git}}{March 2023}
+        \resumeItemListStart
+            \resumeItem{Designed and implemented a comprehensive suite of RESTful APIs, streamlining data exchange and enhancing the user experience. }
+            % \resumeItem{Created intended behavior by making logic complying to the extensive Spigot API in Java}
+            \resumeItem{Developed a custom hashmap-based cache, achieving an accelerated club and account lookup times by a factor of 2 with frequent checks.}
+            \resumeItem{Worked closely with front-end developers to ensure seamless data integration and back-end project management matched front-end. }
+            % \resumeItem{Published to GitHub and spigotmc.org}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Audio Clarity Enhancement} $|$ \footnotesize\emph{MATLAB, FFT}}{November 2023}
+        \resumeItemListStart
+            \resumeItem{Analyzed corrupted audio files to detect frequency bands of corruption on a frequency domain. }
+            % \resumeItem{Created intended behavior by making logic complying to the extensive Spigot API in Java}
+            \resumeItem{Developed precise band-pass filters tailored to isolate and amplify the target frequency range, effectively suppressing unwanted noise and interference.}
+            \resumeItem{Successfully retrieved obscured messages from corrupted audio, enabling clear comprehension for listeners. }
+            % \resumeItem{Published to GitHub and spigotmc.org}
+        \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+          {\textbf{Florida Cryptocurrency and Alternative Assets Club} $|$ \footnotesize\emph{Treasurer}\vspace{8pt}}{Jan. 2022 -- Present}
+          {\small{Lead topic discussions on the cutting edge applications and research within blockchain research}}
+
+        \resumeProjectHeading
+          {\textbf{AlgoGators}\vspace{8pt} $|$ \footnotesize\emph{Quantitative Researcher}}{August 2023 -- Present}
+          \small{Help lead quantitative research and algorithm development for algorithmic futures trading strategies}
+
+        \resumeProjectHeading
+          {\textbf{Blue Vigil} $|$ \footnotesize\emph{Intern}\vspace{8pt}}{June 2023 -- August 2023}
+          {\small{Developed communication protocols for data transfer over RS-485 in electrically noisy environments. Implemented Reed Solomon Error-correction code alleviating communication faults due to corruption. Built fault warning systems within commercial drone lighting system on ESP-32s}}
+          
+    \resumeSubHeadingListEnd 
+
+\end{document}
+
