@@ -4,3 +4,9 @@ main.fls
 main.log
 main.out
 main.synctex.gz
+algo.aux
+algo.fdb_latexmk
+algo.fls
+algo.log
+algo.out
+algo.synctex.gz
