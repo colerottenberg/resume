@@ -15,3 +15,9 @@ template.fdb_latexmk
 template.fls
 template.log
 template.synctex.gz
+volobridge.aux
+volobridge.fdb_latexmk
+volobridge.fls
+volobridge.log
+volobridge.out
+volobridge.synctex.gz
